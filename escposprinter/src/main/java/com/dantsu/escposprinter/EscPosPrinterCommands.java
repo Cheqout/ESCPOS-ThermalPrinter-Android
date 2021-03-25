@@ -36,10 +36,11 @@ public class EscPosPrinterCommands {
     public static final byte[] TEXT_FONT_D = new byte[]{0x1B, 0x4D, 0x03};
     public static final byte[] TEXT_FONT_E = new byte[]{0x1B, 0x4D, 0x04};
 
-    public static final byte[] TEXT_SIZE_NORMAL = new byte[]{0x1D, 0x21, 0x00};
-    public static final byte[] TEXT_SIZE_DOUBLE_HEIGHT = new byte[]{0x1D, 0x21, 0x01};
-    public static final byte[] TEXT_SIZE_DOUBLE_WIDTH = new byte[]{0x1D, 0x21, 0x10};
-    public static final byte[] TEXT_SIZE_BIG = new byte[]{0x1D, 0x21, 0x11};
+    public static final byte[] TEXT_SIZE_NORMAL = new byte[]{0x1B, 0x21, 0x03};
+    public static final byte[] TEXT_SIZE_MEDIUM = new byte[]{0x1B, 0x21, 0x08};
+    public static final byte[] TEXT_SIZE_DOUBLE_HEIGHT = new byte[]{0x1B, 0x21, 0x10};
+    public static final byte[] TEXT_SIZE_DOUBLE_WIDTH = new byte[]{0x1B, 0x21, 0x20};
+    public static final byte[] TEXT_SIZE_BIG = new byte[]{0x1B, 0x21, 0x30};
 
     public static final byte[] TEXT_UNDERLINE_OFF = new byte[]{0x1B, 0x2D, 0x00};
     public static final byte[] TEXT_UNDERLINE_ON = new byte[]{0x1B, 0x2D, 0x01};
@@ -202,7 +203,7 @@ public class EscPosPrinterCommands {
      * @param printerConnection an instance of a class which implement DeviceConnection
      */
     public EscPosPrinterCommands(DeviceConnection printerConnection) {
-        this(printerConnection, null);
+        this(printerConnection, new EscPosCharsetEncoding("ISO-8859-1", 6));
     }
 
     /**

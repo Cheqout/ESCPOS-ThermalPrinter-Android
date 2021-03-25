@@ -103,7 +103,7 @@ public class PrinterTextParser {
     
     
     private EscPosPrinter printer;
-    private byte[][] textSize = {EscPosPrinterCommands.TEXT_SIZE_NORMAL};
+    private byte[][] textSize = {EscPosPrinterCommands.TEXT_SIZE_MEDIUM};
     private byte[][] textColor = {EscPosPrinterCommands.TEXT_COLOR_BLACK};
     private byte[][] textReverseColor = {EscPosPrinterCommands.TEXT_COLOR_REVERSE_OFF};
     private byte[][] textBold = {EscPosPrinterCommands.TEXT_WEIGHT_NORMAL};
